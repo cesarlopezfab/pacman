@@ -1,4 +1,4 @@
-package es.cesarlopezfab.starter;
+package es.cesarlopezfab.pacman;
 
 public class Cell {
 
