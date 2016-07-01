@@ -8,16 +8,16 @@ import org.junit.Test;
 public class CellTest {
 
 	@Test
-	public void emptyCell() {
-		Cell cell = new Cell();
+	public void createsEmptyCell() {
+		Cell cell = CellFactory.empty();
 		
 		assertTrue(cell.isEmpty());
 	}
 	
 	@Test
-	public void connectNorthSouthTwoEmptyCells() {
-		Cell north = new Cell();
-		Cell south = new Cell();
+	public void connectsNorthSouthTwoEmptyCells() {
+		Cell north = CellFactory.empty();
+		Cell south = CellFactory.empty();
 		
 		north.connectSouth(south);
 		
@@ -26,9 +26,9 @@ public class CellTest {
 	}
 	
 	@Test
-	public void connectSouthNorthTwoEmptyCells() {
-		Cell north = new Cell();
-		Cell south = new Cell();
+	public void connectsSouthNorthTwoEmptyCells() {
+		Cell north = CellFactory.empty();
+		Cell south = CellFactory.empty();
 		
 		south.connectNorth(north);
 		
