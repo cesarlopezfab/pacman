@@ -61,4 +61,9 @@ public class Cell {
 		return content;
 	}
 
+	// FIXME: probably this should be set from someone inside same package.
+	public void content(Content content) {
+		this.content = content;
+	}
+
 }

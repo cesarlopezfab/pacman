@@ -2,7 +2,7 @@ package es.cesarlopezfab.board;
 
 public class CellFactory {
 
-	static Cell empty() {
+	public static Cell empty() {
 		return new Cell(Content.EMPTY);
 	}
 

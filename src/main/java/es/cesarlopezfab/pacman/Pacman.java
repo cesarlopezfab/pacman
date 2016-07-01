@@ -1,8 +1,9 @@
 package es.cesarlopezfab.pacman;
 
 import es.cesarlopezfab.board.Cell;
+import es.cesarlopezfab.board.Content;
 
-public class Pacman {
+public class Pacman implements Content {
 
 	private Cell position;
 	private Direction direction;
@@ -10,6 +11,8 @@ public class Pacman {
 	public Pacman(Cell position, Direction direction) {
 		this.position = position;
 		this.direction = direction;
+
+		this.position.content(this);
 	}
 
 	public Cell position() {
@@ -17,7 +20,13 @@ public class Pacman {
 	}
 
 	public void tick() {
-		this.position.east();
+		Cell prev = position;
+		
+		position = position.east();
+		position.content(this);
+		
+		prev.content(EMPTY);
+		
 	}
 
 }
