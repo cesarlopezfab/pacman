@@ -3,7 +3,11 @@
 
 # pacman
 
-Project created after the kata at SoftwareCraftsmanshipMadrid Meetup on 30/06/2016 to implement the kata on my own. The following rules are copy pasted from there, https://github.com/SoftwareCraftsmanshipMadrid/PacMan
+Project created after the kata at SoftwareCraftsmanshipMadrid Meetup on 30/06/2016 to implement the kata on my own.
+
+My idea is to follow Luis suggestion to implement the grid using linked cells.  
+
+The following rules are copy pasted from there, https://github.com/SoftwareCraftsmanshipMadrid/PacMan
 
 # Kata - Coding Dojo
 
