@@ -21,8 +21,8 @@ public class CellTest {
 		
 		north.connectSouth(south);
 		
-		assertEquals(south, north.southCell());
-		assertEquals(north, south.northCell());
+		assertEquals(south, north.south());
+		assertEquals(north, south.north());
 	}
 	
 	@Test
@@ -32,8 +32,19 @@ public class CellTest {
 		
 		south.connectNorth(north);
 		
-		assertEquals(south, north.southCell());
-		assertEquals(north, south.northCell());
+		assertEquals(south, north.south());
+		assertEquals(north, south.north());
+	}
+	
+	@Test
+	public void connectsEastWestTwoEmptyCells() {
+		Cell east = CellFactory.empty();
+		Cell west = CellFactory.empty();
+		
+		east.connectWest(west);
+		
+		assertEquals(west, east.west());
+		assertEquals(east, west.east());
 	}
 	
 }

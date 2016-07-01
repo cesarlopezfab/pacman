@@ -4,6 +4,8 @@ public class Cell {
 
 	private Cell south;
 	private Cell north;
+	private Cell east;
+	private Cell west;
 
 	public boolean isEmpty() {
 		return true;
@@ -23,12 +25,34 @@ public class Cell {
 		}
 	}
 
-	public Cell southCell() {
+	void connectWest(Cell cell) {
+		if (west == null) {
+			west = cell;
+			cell.connectEast(this);
+		}
+	}
+
+	void connectEast(Cell cell) {
+		if (east == null) {
+			east = cell;
+			cell.connectWest(this);
+		}
+	}
+
+	public Cell south() {
 		return south;
 	}
 
-	public Cell northCell() {
+	public Cell north() {
 		return north;
+	}
+
+	public Cell west() {
+		return west;
+	}
+
+	public Cell east() {
+		return east;
 	}
 
 }
