@@ -1,25 +1,28 @@
 package es.cesarlopezfab.pacman;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import de.bechte.junit.runners.context.HierarchicalContextRunner;
-import es.cesarlopezfab.pacman.Cell;
-import es.cesarlopezfab.pacman.CellFactory;
 
 @RunWith(HierarchicalContextRunner.class)
 public class CellTest {
 
-	public class Content {
-		@Test
-		public void createsEmptyCell() {
-			Cell cell = CellFactory.empty();
+	@Test
+	public void createsEmptyCell() {
+		Cell cell = CellFactory.empty();
 
-			assertTrue(cell.isEmpty());
-		}
+		assertEquals(Content.EMPTY, cell.content());
+	}
+
+	@Test
+	public void createCellWithContent() {
+		Cell cell = CellFactory.withPacman();
+
+		assertFalse(Content.EMPTY.equals(cell.content()));
 	}
 
 	public class Connection {

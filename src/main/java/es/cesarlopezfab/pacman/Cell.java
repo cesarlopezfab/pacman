@@ -6,9 +6,12 @@ public class Cell {
 	private Cell north;
 	private Cell east;
 	private Cell west;
+	
+	private Content content;
 
-	public boolean isEmpty() {
-		return true;
+	
+	public Cell(Content content) {
+		this.content = content;
 	}
 
 	void connectSouth(Cell cell) {
@@ -53,6 +56,10 @@ public class Cell {
 
 	public Cell east() {
 		return east;
+	}
+
+	public Content content() {
+		return content;
 	}
 
 }
