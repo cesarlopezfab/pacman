@@ -1,4 +1,4 @@
-package es.cesarlopezfab.pacman;
+package es.cesarlopezfab.board;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,6 +7,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import de.bechte.junit.runners.context.HierarchicalContextRunner;
+import es.cesarlopezfab.board.Cell;
+import es.cesarlopezfab.board.CellFactory;
+import es.cesarlopezfab.board.Content;
 
 @RunWith(HierarchicalContextRunner.class)
 public class CellTest {

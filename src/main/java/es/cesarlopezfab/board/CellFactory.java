@@ -1,4 +1,4 @@
-package es.cesarlopezfab.pacman;
+package es.cesarlopezfab.board;
 
 public class CellFactory {
 

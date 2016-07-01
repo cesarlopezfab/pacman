@@ -1,4 +1,4 @@
-package es.cesarlopezfab.pacman;
+package es.cesarlopezfab.board;
 
 public class Cell {
 
@@ -8,7 +8,6 @@ public class Cell {
 	private Cell west;
 	
 	private Content content;
-
 	
 	public Cell(Content content) {
 		this.content = content;
