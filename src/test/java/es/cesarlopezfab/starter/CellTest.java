@@ -47,4 +47,15 @@ public class CellTest {
 		assertEquals(east, west.east());
 	}
 	
+	@Test
+	public void connectsWestEastTwoEmptyCells() {
+		Cell west = CellFactory.empty();
+		Cell east = CellFactory.empty();
+		
+		west.connectEast(east);
+		
+		assertEquals(east, west.east());
+		assertEquals(west, east.west());
+	}
+	
 }
