@@ -5,6 +5,11 @@
 	<artifactId>pacman</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -23,10 +28,7 @@
 			<plugin>
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
-				<version>4.1.0</version>
-                <configuration>
-                    <repoToken>aYUW9N8ijHOvSmy9oI1Adpk44WThbnu5v</repoToken>
-                </configuration>
+				<version>4.2.0</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
