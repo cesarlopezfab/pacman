@@ -9,9 +9,11 @@ public class Game {
 	private int currentDots;
 	private final Pacman pacman;
 
-	public Game(Board board, Pacman pacman) {
-		this.pacman = pacman;
+	public Game(Board board) {
+		this.pacman = new Pacman(board.start(), Direction.EAST);
 		this.currentDots = board.startingDots();
+
+		board.start().content(pacman);
 	}
 
 	public boolean won() {
@@ -35,6 +37,10 @@ public class Game {
 
 	private boolean isADot(Cell cell) {
 		return cell.content().equals(Content.DOT);
+	}
+
+	public Pacman pacman() {
+		return pacman;
 	}
 
 }

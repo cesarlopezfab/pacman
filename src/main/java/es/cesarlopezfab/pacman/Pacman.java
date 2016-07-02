@@ -11,23 +11,21 @@ public class Pacman implements Content {
 	public Pacman(Cell position, Direction direction) {
 		this.position = position;
 		this.direction = direction;
-
-		this.position.content(this);
 	}
 
-	public Cell position() {
+	Cell position() {
 		return position;
 	}
 
-	public void face(Direction direction) {
+	void face(Direction direction) {
 		this.direction = direction;
 	}
 
-	public Direction direction() {
+	Direction direction() {
 		return direction;
 	}
 
-	public void position(Cell position) {
+	void position(Cell position) {
 		this.position = position;
 
 	}
