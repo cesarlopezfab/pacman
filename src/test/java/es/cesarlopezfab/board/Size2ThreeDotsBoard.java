@@ -1,19 +1,23 @@
 package es.cesarlopezfab.board;
 
 import static es.cesarlopezfab.pacman.Direction.EAST;
+import static es.cesarlopezfab.pacman.Direction.NORTH;
 import static es.cesarlopezfab.pacman.Direction.SOUTH;
 import static es.cesarlopezfab.pacman.Direction.WEST;
-import static es.cesarlopezfab.pacman.Direction.NORTH;
 
-public class Size2EmptyBoard implements Board {
+import es.cesarlopezfab.board.Board;
+import es.cesarlopezfab.board.Cell;
+import es.cesarlopezfab.board.CellFactory;
+
+public class Size2ThreeDotsBoard implements Board {
 	
-	private Cell leftLower;
-	
-	public Size2EmptyBoard() {
+	private final Cell leftLower;
+
+	public Size2ThreeDotsBoard() {
 		leftLower = CellFactory.empty();
-		Cell rightLower = CellFactory.empty();
-		Cell rightHigher = CellFactory.empty();
-		Cell leftHigher = CellFactory.empty();
+		Cell leftHigher = CellFactory.dot();
+		Cell rightLower = CellFactory.dot();;
+		Cell rightHigher = CellFactory.dot();;
 		
 		leftLower.connect(EAST, rightLower);
 		rightLower.connect(NORTH, rightHigher);
@@ -26,7 +30,7 @@ public class Size2EmptyBoard implements Board {
 	}
 
 	public int startingDots() {
-		return 0;
+		return 3;
 	}
-
+	
 }

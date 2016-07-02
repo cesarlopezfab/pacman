@@ -9,5 +9,9 @@ public class CellFactory {
 	public static Cell withPacman() {
 		return new Cell(null);
 	}
+
+	public static Cell dot() {
+		return new Cell(Content.DOT);
+	}
 	
 }

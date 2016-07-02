@@ -6,6 +6,10 @@ public interface Content {
 
 	}
 
+	class Dot implements Content {
+	}
+
 	static final Content EMPTY = new Empty();
+	static final Content DOT = new Dot();
 
 }

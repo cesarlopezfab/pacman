@@ -4,4 +4,6 @@ public interface Board {
 	
 	Cell start();
 
+	int startingDots();
+
 }

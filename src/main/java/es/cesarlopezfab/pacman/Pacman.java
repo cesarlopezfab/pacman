@@ -19,14 +19,17 @@ public class Pacman implements Content {
 		return position;
 	}
 
-	public void tick() {
-		Cell prev = position;
-		
-		position = position.east();
-		position.content(this);
-		
-		prev.content(EMPTY);
-		
+	public void face(Direction direction) {
+		this.direction = direction;
+	}
+
+	public Direction direction() {
+		return direction;
+	}
+
+	public void position(Cell position) {
+		this.position = position;
+
 	}
 
 }

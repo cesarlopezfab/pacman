@@ -1,5 +1,9 @@
 package es.cesarlopezfab.board;
 
+import static es.cesarlopezfab.pacman.Direction.EAST;
+import static es.cesarlopezfab.pacman.Direction.NORTH;
+import static es.cesarlopezfab.pacman.Direction.SOUTH;
+import static es.cesarlopezfab.pacman.Direction.WEST;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -34,10 +38,10 @@ public class CellTest {
 			Cell north = CellFactory.empty();
 			Cell south = CellFactory.empty();
 
-			north.connectSouth(south);
+			north.connect(SOUTH, south);
 
-			assertEquals(south, north.south());
-			assertEquals(north, south.north());
+			assertEquals(south, north.at(SOUTH));
+			assertEquals(north, south.at(NORTH));
 		}
 
 		@Test
@@ -45,10 +49,10 @@ public class CellTest {
 			Cell north = CellFactory.empty();
 			Cell south = CellFactory.empty();
 
-			south.connectNorth(north);
+			south.connect(NORTH, north);
 
-			assertEquals(south, north.south());
-			assertEquals(north, south.north());
+			assertEquals(south, north.at(SOUTH));
+			assertEquals(north, south.at(NORTH));
 		}
 
 		@Test
@@ -56,10 +60,10 @@ public class CellTest {
 			Cell east = CellFactory.empty();
 			Cell west = CellFactory.empty();
 
-			east.connectWest(west);
+			east.connect(WEST, west);
 
-			assertEquals(west, east.west());
-			assertEquals(east, west.east());
+			assertEquals(west, east.at(WEST));
+			assertEquals(east, west.at(EAST));
 		}
 
 		@Test
@@ -67,10 +71,10 @@ public class CellTest {
 			Cell west = CellFactory.empty();
 			Cell east = CellFactory.empty();
 
-			west.connectEast(east);
+			west.connect(EAST, east);
 
-			assertEquals(east, west.east());
-			assertEquals(west, east.west());
+			assertEquals(east, west.at(EAST));
+			assertEquals(west, east.at(WEST));
 		}
 	}
 
