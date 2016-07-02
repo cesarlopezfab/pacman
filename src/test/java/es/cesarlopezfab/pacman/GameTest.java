@@ -10,7 +10,7 @@ import es.cesarlopezfab.board.Size2ThreeDotsBoard;
 public class GameTest {
 	
 	@Test
-	public void a() {
+	public void pacmanEatsAllDotsAndUserWins() {
 		Board board = new Size2ThreeDotsBoard();
 		Pacman pacman = new Pacman(board.start(), Direction.EAST);
 		Game game = new Game(board, pacman);
@@ -20,7 +20,6 @@ public class GameTest {
 		game.tick();
 		pacman.face(Direction.WEST);
 		game.tick();
-		
 		
 		assertTrue(game.won());
 	}
